@@ -12,6 +12,7 @@ ITEM_METHODS = ['GET', 'PATCH', 'PUT', 'DELETE']
 
 XML = False
 PAGINATION = False
+JSON_SORT_KEYS = True
 
 X_DOMAINS = ['http://localhost',  # The domain where Swagger UI is running
              'http://editor.swagger.io',
