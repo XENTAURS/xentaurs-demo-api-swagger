@@ -1,0 +1,5 @@
+flask
+cherrypy
+requests
+eve
+eve_swagger
