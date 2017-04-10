@@ -6,9 +6,9 @@ pipeline {
   stages {
     stage('Development') {
       steps {
-        echo 'Building Docker Container'
+        echo '##### Building Docker Container ####'
         sh "sudo docker build -t docker.demo.xentaurs.com:5000/xentaurs-demo-api-swagger:$TAG ."
-        sh "sudo docker push"
+        sh "sudo docker push docker.demo.xentaurs.com:5000/xentaurs-demo-api-swagger:$TAG"
      }
     }
   }
