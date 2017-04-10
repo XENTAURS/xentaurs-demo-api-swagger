@@ -1,3 +1,4 @@
+# vim: tabstop=2 shiftwidth=2 expandtab
 pipeline {
   agent any
   parameters {
@@ -6,9 +7,9 @@ pipeline {
   stages {
     stage('Development') {
       steps {
-	echo 'Building Docker Container'
-	sudo docker build -t docker.demo.xentaurs.com:5000/xentaurs-demo-api-swagger:$TAG .
-
+        echo 'Building Docker Container'
+        sudo docker build -t docker.demo.xentaurs.com:5000/xentaurs-demo-api-swagger:$TAG .
+        sudo docker push
      }
     }
   }
