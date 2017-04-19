@@ -21,7 +21,8 @@ pipeline {
       steps {
         echo '#### Deploying Docker Container ####'
 	sh "docker-compose -p $ProjectName ."
-     }
+    }
    }
+  }
  }
 }
