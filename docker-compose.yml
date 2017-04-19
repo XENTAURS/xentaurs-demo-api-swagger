@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    image: docker.demo.xentaurs.com:5000/xentaurs-demo-api-swagger:0.0.1
+    ports:
+      - "8080"
+networks:
+  default:
+    external:
+      name: backend
