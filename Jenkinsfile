@@ -8,7 +8,6 @@ pipeline {
   environment {
     DOCKER_HOST = "tcp://${DOCKER_HOST}"
   }
-  parameters {
   stages {
     stage('Build') {
       steps {
@@ -21,8 +20,8 @@ pipeline {
       steps {
         echo '#### Deploying Docker Container ####'
 	sh "docker-compose -p $ProjectName ."
-    }
    }
   }
  }
 }
+
