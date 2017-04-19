@@ -1,0 +1,11 @@
+version: '2'
+services:
+  eveapi:
+    image: docker.demo.xentaurs.com:5000/xentaurs-demo-api-swagger:latest
+    ports:
+      - "8080"
+    networks:
+      - backend
+    container_name: eveapi
+networks:
+  backend:
