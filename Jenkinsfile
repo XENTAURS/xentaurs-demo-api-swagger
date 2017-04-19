@@ -16,7 +16,8 @@ pipeline {
     stage('Dev: Deploy'){
       steps {
         echo '#### Deploying Docker Container ####'
-	sh "docker service create --name $ProjectName --network backend docker.demo.xentaurs.com:5000/xentaurs-demo-api-swagger:$TAG"
+	sh "sudo DOCKER_HOST=tcp://${DockerHost}:2375 docker service create --name $ProjectName
+	    --network backend docker.demo.xentaurs.com:5000/xentaurs-demo-api-swagger:$TAG"
    }
   }
  }
