@@ -18,6 +18,7 @@ pipeline {
         echo '#### Deploying Docker Container ####'
  	export DOCKER_HOST="tcp://${DOCKER_HOST}"
 	sh "docker-compose -p $ProjectName ."
-    }
-  }
+     }
+   }
+ }
 }
