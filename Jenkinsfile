@@ -6,7 +6,7 @@ pipeline {
     string(name: 'DockerHost', defaultValue: '10.0.0.141', description: 'Demo Xentaurs API')
   }
   environment {
-    DOCKER_HOST = "tcp://${DOCKER_HOST}:2375"
+    DOCKER_HOST = "tcp://${DockerHost}:2375"
   }
   stages {
     stage('Build') {
