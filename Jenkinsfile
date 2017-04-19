@@ -5,9 +5,6 @@ pipeline {
     string(name: 'ProjectName', defaultValue: 'eveapi', description: 'Demo Xentaurs API')
     string(name: 'DockerHost', defaultValue: '10.0.0.141', description: 'Demo Xentaurs API')
   }
-  environment {
-    DOCKER_HOST = "tcp://${DockerHost}:2375"
-  }
   stages {
     stage('Build') {
       steps {
@@ -19,8 +16,7 @@ pipeline {
     stage('Dev: Deploy'){
       steps {
         echo '#### Deploying Docker Container ####'
- 	echo '$DOCKER_HOST'
-	sh "docker stack deploy --compose-file docker-compose.yml $ProjectName"
+	sh "DOCKER_HOST=tcp://${DockerHost}:2375 docker stack deploy --compose-file docker-compose.yml $ProjectName"
    }
   }
  }
