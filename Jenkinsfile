@@ -16,7 +16,7 @@ pipeline {
     stage('Dev: Deploy'){
       steps {
         echo '#### Deploying Docker Container ####'
-	sh "DOCKER_HOST=tcp://${DockerHost}:2375 docker stack deploy --compose-file docker-compose.yml $ProjectName"
+	sh "docker service create --name $ProjectName --network backend docker.demo.xentaurs.com:5000/xentaurs-demo-api-swagger:$TAG"
    }
   }
  }
