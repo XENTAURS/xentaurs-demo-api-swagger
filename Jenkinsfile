@@ -16,7 +16,7 @@ pipeline {
     stage('Dev: Deploy'){
       steps {
         echo '#### Deploying Docker Container ####'
- 	export DOCKER_HOST=tcp://${DOCKER_HOST}
+ 	export DOCKER_HOST="tcp://${DOCKER_HOST}"
 	docker-compose -p $ProjectName .
     }
   }
