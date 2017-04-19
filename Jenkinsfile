@@ -1,8 +1,8 @@
 pipeline {
   agent any
   parameters {
-    string(name: 'Tag', defaultValue: '0.0.1', description: 'Git Tag'),
-    string(name: 'ProjectName', defaultValue: 'eveapi', description: 'Demo Xentaurs API'),
+    string(name: 'Tag', defaultValue: '0.0.1', description: 'Git Tag')
+    string(name: 'ProjectName', defaultValue: 'eveapi', description: 'Demo Xentaurs API')
     string(name: 'DockerHost', defaultValue: '10.0.0.141', description: 'Demo Xentaurs API')
   }
   stages {
