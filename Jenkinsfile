@@ -19,7 +19,7 @@ pipeline {
     stage('Dev: Deploy'){
       steps {
         echo '#### Deploying Docker Container ####'
-	sh "docker-compose -p $ProjectName ."
+	sh "docker-compose -p $ProjectName up"
    }
   }
  }
