@@ -52,5 +52,16 @@ pipeline {
         echo '#### Run End To End Test ####'
      }
     }
+    stage('Prod: Approval'){
+      steps {
+	input 'Deploy to Production?'
+     }
+    }
+    stage('Prod: Deploy To Prod'){
+      steps {
+	echo '#### Create App Environment In Prod ####'
+	echo '#### Deploy App To Prod ####'
+     }
+    }
   }
 }
