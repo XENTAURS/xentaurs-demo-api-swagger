@@ -44,6 +44,7 @@ pipeline {
      }
     }
     state('QA: Run Functional Tests'){
+      steps {
         echo '#### Run Fuctional Test ####'
 	echo '#### Destroy App Environment ####'
      }
@@ -55,6 +56,7 @@ pipeline {
      }
     }
     stage('Stg: Run End To End Tests'){
+      steps {
         echo '#### Run End To End Test ####'
      }
     }
