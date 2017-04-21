@@ -1,6 +1,6 @@
 ## xentaurs-demo-api-swagger
 
-# _Objectives
+# Objectives
 
 The purpose of this API example is to show how to build Application Repos which support the following:
 
