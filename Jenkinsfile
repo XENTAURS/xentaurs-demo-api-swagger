@@ -43,7 +43,7 @@ pipeline {
         echo '#### Deploy App To QA ####'
      }
     }
-    state('QA: Run Functional Tests'){
+    stage('QA: Run Functional Tests'){
       steps {
         echo '#### Run Fuctional Test ####'
 	echo '#### Destroy App Environment ####'
