@@ -6,9 +6,9 @@ app.register_blueprint(swagger)
 # required. See http://swagger.io/specification/#infoObject for details.
 
 app.config['SWAGGER_INFO'] = {
-    'title': 'Xentaurs - Example API',
+    'title': 'Xentaurs - Example Infrastructure API',
     'version': '1.0',
-    'description': 'Demo API',
+    'description': 'Infrastructure Automation API',
     'contact': {
         'name': 'Xentaurs',
         'url': 'http://www.xentaurs.com'
