@@ -6,12 +6,12 @@ app.register_blueprint(swagger)
 # required. See http://swagger.io/specification/#infoObject for details.
 
 app.config['SWAGGER_INFO'] = {
-    'title': 'Xentaurs - Example Infrastructure API',
+    'title': 'Green Pages - Example Infrastructure API',
     'version': '1.0',
     'description': 'Infrastructure Automation API',
     'contact': {
-        'name': 'Xentaurs',
-        'url': 'http://www.xentaurs.com'
+        'name': 'Green Pages',
+        'url': 'http://www.greenpages.com'
     },
     'license': {
         'name': 'BSD',
