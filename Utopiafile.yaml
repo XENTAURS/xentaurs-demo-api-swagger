@@ -1,0 +1,27 @@
+---
+app:
+  name: xentaurs-demo-api-swagger
+  git: https://github.com/XENTAURS/xentaurs-demo-api-swagger.git
+  upstream: nginx:ldap
+dns:
+  dev: devxentaurs.com
+  stg: stgxentaurs.com
+  prd:
+    - prdxentaurs.com
+    - xentaurs.com
+data:
+  dynamodb:
+    schema_file: dynamodb/schema.yaml
+exec:
+  pre-deployment: make dbmigrate
+  post-deployment: make verify
+environment:
+  globals:
+    - FACEBOOK_API_KEY
+    - CLICK_TO_CALL_API_KEY
+    - ORACLE_DB_USER
+    - ORACLE_DB_PASS
+  xentaurs-demo-api-swagger:
+    config_version: 0.0.1
+  nginx:
+    config_version: 0.0.2
